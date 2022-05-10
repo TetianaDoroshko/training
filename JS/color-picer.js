@@ -45,8 +45,20 @@ function onPaletteContainerClick(event) {
   if (!event.target.classList.contains('color-swatch')) {
     return;
   }
+  onActiveCardClassRemove();
+  onActiveCardClassAdd(event);
+  setBodyColor(event);
+}
+
+function onActiveCardClassRemove() {
   const currentCard = paletteContainer.querySelector('.is-active');
   currentCard?.classList.remove('is-active');
+}
+
+function onActiveCardClassAdd(event) {
   event.target.closest('.color-card').classList.add('is-active');
+}
+
+function setBodyColor(event) {
   document.body.style.backgroundColor = event.target.dataset.hex;
 }
