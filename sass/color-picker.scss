@@ -1,0 +1,21 @@
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.color-card {
+  padding: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgb(98, 124, 124), -2px -1px 1px rgb(71, 90, 90);
+  background-color: #fff;
+}
+.color-card.is-active {
+  transform: perspective(400px) rotateX(20deg);
+}
+.color-swatch {
+  width: 100%;
+  height: 100px;
+}
+.color-meta {
+  color: rgb(0, 0, 0);
+}

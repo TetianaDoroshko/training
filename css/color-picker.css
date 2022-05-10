@@ -1,0 +1,30 @@
+.palette {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.color-card {
+  padding: 5px;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 1px #627c7c, -2px -1px 1px #475a5a;
+          box-shadow: 1px 1px 1px #627c7c, -2px -1px 1px #475a5a;
+  background-color: #fff;
+}
+
+.color-card.is-active {
+  -webkit-transform: perspective(400px) rotateX(20deg);
+          transform: perspective(400px) rotateX(20deg);
+}
+
+.color-swatch {
+  width: 100%;
+  height: 100px;
+}
+
+.color-meta {
+  color: black;
+}
+/*# sourceMappingURL=color-picker.css.map */
